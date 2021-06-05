@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .models import CHOICE, Profile
 
 class UserLoginForm(forms.ModelForm):
+	phone_number = forms.CharField(max_length = 200)
 	class Meta:
 		model = User
 		fields = ['phone_number', 'password']
