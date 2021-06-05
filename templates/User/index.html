@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Enimus | Home{% endblock %}
+
+
+
+{% block catagory %}
+
+	<div class="Eni_CategoriesBar">
+		<button class=" EniSc_BorderRadius EniSc_BoxShadow EniSc_Opacity EniSc_Pointer" > Food </button>
+		<button class=" EniSc_BorderRadius EniSc_BoxShadow EniSc_Opacity EniSc_Pointer" > Food </button>
+		<button class=" EniSc_BorderRadius EniSc_BoxShadow EniSc_Opacity EniSc_Pointer" > Food </button>
+		<button class=" EniSc_BorderRadius EniSc_BoxShadow EniSc_Opacity EniSc_Pointer" > Food </button>
+		<button class=" EniSc_BorderRadius EniSc_BoxShadow EniSc_Opacity EniSc_Pointer" > Food </button>
+		<button class=" EniSc_BorderRadius EniSc_BoxShadow EniSc_Opacity EniSc_Pointer" > Food </button>
+	</div>
+
+{% endblock %}
+
+
+{% block loginform %}
+
+	{% csrf_token %}
+	<label for="phoneNumber"><span> Phone Number </span></label>
+		{{form.phone_number}}
+		
+	<label for="password" ><span> Password </span></label>
+		{{form.password}}
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="Eni_ManiCont">
+
+{% for i in test %}
+
+  		<div class="Eni_ItemsCont">
+				<div class="EniSc_ItemsImgCont" >
+					<img src="img/img2.jpg" >
+				</div>
+				
+				<div class="EniSc_ItemsDetailCont">
+					<p class="EniSc_Default">Items:<span> Items Name </span>. </p>
+					<p class="EniSc_Default">Price:<span> Rs10000 </span>. </p>
+					<button class="EniSc_Opacity EniSc_Pointer"> Buy </button>
+				</div>
+				<div class="EniSc_ItemsRatingCont" >
+					<div class="EniSc_ItemsRating EniSc_Default" >
+						<button><span class='far EniSc_Pointer'>&#xf164; </span> </button> <p>10</p> 
+						<span class="EniSc_Seperator">|</span>  
+						<p >100000</p> <button><span class="far EniSc_Pointer">&#xf165;</span> </button>
+					</div>
+					<div class="EniSc_ItemsFav">
+						<button class="EniSc_Pointer"> <span class="fa">&#xf004;  </span></button>
+						<button class="EniSc_Pointer"> <span class='fas'>&#xf067; </span> </button>
+					</div>
+				</div>
+			</div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}

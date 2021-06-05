@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPEA html>
+<html>
+
+<head>
+	<title> {% block title %}{% endblock %}</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Author" content="EnimusDev" >
+	<link rel='stylesheet' href="{% static 'test.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="Eni_TopMenuCont EniSc_BoxShadow" >
+		<div class="EniSc_LogoSec EniSc_Opacity">
+			<span> <a href="{% url 'main' %}"> ENIMUS </a> </span>
+		</div>
+		<div class="EniSc_SearchSec">
+			<form action=" " class="EniSc_BorderRadius EniSc_BoxShadow ">
+				<input>
+				<button> <span class=" fa fa-search EniSc_Pointer"> </span> </button>
+			</form>
+		</div>
+		<div class="EniSc_MenuSec">
+			<a href="#1" > <span class="fa fa-store EniSc_Opacity "> </span> </a>
+			<a onclick="document.getElementsByClassName('Eni_LogInForm')[0].style.display='block';" > <span class="fa fa-user-circle EniSc_Opacity EniSc_Pointer"> </span> </a>
+			
+			<a onclick="document.getElementsByClassName('Eni_LogInForm')[0].style.display='block';" > <span class="fa fa-bell EniSc_Opacity EniSc_Pointer"> 
+				<div class="EniSc_FloatingNoticNo">1</div>
+			</span> </a>
+		</div>
+	</div>
+	{% block catagory %}
+    {% endblock %}
+
+<!---------------------------------------------------------------- Login(form)-->
+<div class="Eni_LogInForm" >
+  <span onclick="document.getElementsByClassName('Eni_LogInForm')[0].style.display='none';"  class="fa EniSc_Pointer EniSc_Opacity"> &#xf00d;</span>
+  <form method="POST">
+		<h1 class="EniSc_Pointer"> Sign in to Enimus </h1>
+		{% block loginform %}
+    	{% endblock %}
+			 
+		<button type="submit" name="signin" value='signin' class=" EniSc_SigninButton EniSc_Link ">Sign in</button>
+		<div class="EniSc_SignupLink">
+		  <span>Don't have an account yet.<a href="{% url 'csignup' %}">Sign Up here.</a></span>
+		</div>
+  </form>
+</div>
+<!---------------------------------------------------------------- Body(items)-->
+
+	{% block body %}
+
+	{% endblock %}
+
+
+	<div class="Eni_FooterCont" >
+		<p> CopyRight 2021 enimus Private Ltd. All rights reserved </p>
+	
+	  <div class="EniSc_FooterMenu">
+		<a href="#1"> <span class='cursorLink EniSc_Link'> Privacy Policy </span> </a>
+		<a href="#1"> <span class='cursorLink EniSc_Link'> Sales Policy </span> </a>
+		<a href="#1"> <span class='cursorLink EniSc_Link'> Terms of Use</span> </a>
+		<a href="#1"> <span class='cursorLink EniSc_Link'> Contect Us </span> </a>
+	  </div>
+	  
+	</div>
+
+
+
+</body>
+
+  <script>
+  	window.onload = function() {
+
+	if(document.getElementsByClassName('EniSc_FloatingNoticNo')[0].innerHTML == 0){
+		document.getElementsByClassName('EniSc_FloatingNoticNo')[0].style.display='none';
+	}
+	else{
+		document.getElementsByClassName('EniSc_FloatingNoticNo')[0].style.display='block';
+	}
+	if(document.getElementById('alert').innerHTML == ""){
+		document.getElementsByClassName('alert')[0].style.display='none';
+	}
+}
+  </script>
+
+</html>

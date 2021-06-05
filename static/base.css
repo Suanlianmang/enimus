@@ -1,0 +1,361 @@
+body {
+  width: 100%;
+  margin: 0%;
+  height: auto;
+}
+body::-webkit-scrollbar{display:none;
+}
+
+.EniSc_BorderRadius {
+    outline: none;
+    border: none;
+    border-radius:3px;
+}
+.EniSc_BoxShadow {
+    box-shadow: 1px 1px 1px 1px #b0b0b0;
+}
+
+.EniSc_Opacity {
+  opacity: 70%;
+}
+  .EniSc_Opacity:hover ,.EniSc_Opacity:active {
+    opacity: 100%;
+}
+.EniSc_Link {
+  cursor: pointer;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+  .EniSc_Link:hover {
+  text-decoration: underline;
+}
+.EniSc_Pointer{
+  cursor: pointer;
+}
+.EniSc_Default{
+  cursor: default;
+}
+
+
+.Eni_TopMenuCont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 42% 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 04;
+  margin: 0%;
+  padding: 5px 0%;
+  background-color: #a8e195;
+}
+
+.EniSc_LogoSec {
+  width: auto;
+  margin: 0%;
+  padding: 0%;
+  padding-top: 1%;
+  margin-left: 5%;
+}
+  .EniSc_LogoSec a {
+    font-size: 30px;
+    font-family: Arial Rounded MT;
+    color: black;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.EniSc_SearchSec {
+  width: auto;
+  margin: 0%;
+  padding: 0%;
+  padding-top: 1%;
+}
+  .EniSC_SearchSec form {
+    width: 80%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    background-color: white;
+}
+    
+  .EniSc_SearchSec input {
+    width: 91%;
+    margin: 0%;
+    padding: 1% 5px;
+    border:none;
+    outline:none;
+    font-size: 18px;
+    background-color: transparent;
+}
+  .EniSC_SearchSec button {
+    margin: 1%;
+    padding: 1% 0%;
+    border:none;
+    outline:none;
+    font-size: 18px;
+    background-color: transparent;
+}
+      
+.EniSC_MenuSec {    
+  width: 100%;
+  display: flex;
+  margin: 0%;
+  padding: 1.5%;
+  margin-left: 50%;
+
+} 
+  .EniSC_MenuSec a { margin-right: 5%;
+    padding: 5px 2px;
+    font-size: 20px;
+    font-family: ' rockwell ' ;
+    color: black;
+    text-decoration: none;
+}
+    .EniSC_MenuSec a span{
+    position: relative;
+  }
+    .EniSc_FloatingNoticNo { 
+    position: absolute;
+    top:-35%;
+    right: -70%;
+    padding: 3px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+    
+}
+    
+.Eni_CategoriesBar {
+  width: auto;
+  display: flex;
+  overflow: auto;
+  margin: auto;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  padding: 3px;
+  padding-top: 57px;
+}
+  .Eni_CategoriesBar button {
+    margin-right: 1%;
+    padding: 2px 5px;
+    font-size: 16px;
+    font-family: rockwell;
+    background-color: #e5eae8;
+    
+}
+
+
+
+/*----------Login(form)----------*/
+.Eni_LogInForm { display: none;
+  width: 50%;
+  margin-left: 25%;
+  padding: 1%;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  color: black;
+  background-color: #e5eae8;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+.Eni_LogInForm .fa  { float: right;
+    top: 0%;
+    font-size: 40px;
+    color: black;
+    text-shadow: 2px 2px 2px 2px grey;
+}
+  .Eni_LogInForm h1 { font-family: 'Arial Rounded MT';
+  text-align:center;
+}
+  .Eni_LogInForm form{ display: block;
+    width: 60%;
+    margin: auto;
+    padding: 8%;
+}
+  .Eni_LogInForm label {
+    font-size: 12px; 
+}
+  .Eni_LogInForm input { width: 100%;
+    padding: 1%;
+    font-size: 15px;
+    margin-bottom: 5%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+.EniSc_SigninButton{ width: 30%;
+  margin: 1%;
+  margin-left: 35%;
+  padding: 2%;
+  border-radius: 3px;
+  border: none;
+  color: black;
+  text-align: center;
+  font-family:'Arial Rounded MT';
+  background-color: #a8e195;
+  box-shadow: 1px 1px 1px grey;
+}
+.EniSc_SignupLink{ margin: 0%;
+    margin-top: 1%;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+
+
+
+
+
+.Eni_ManiCont {
+  width: 99%;
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-gap: 1%;
+  margin: auto;
+  margin-bottom: 2.5%;
+  margin-left: 0.8%;
+  /*background-color: #e7fffd;*/
+}
+
+.Eni_ItemsCont {
+  width: 100%;
+  margin: 0%;
+  padding: 1% 1%;
+  background-color: #f1f1f1;
+}
+  .EniSc_ItemsImgCont {
+    width: 100%;
+    margin: 0%;
+}
+    .EniSc_ItemsImgCont img {
+      width: 100%;
+      height: 300px;
+}
+  .EniSc_ItemsDetailCont { 
+    width: 98%;
+    margin: 0%;
+    padding: 1% 0%;
+    padding-left: 2%;
+    background-color: white;
+}
+    .EniSc_ItemsDetailCont p { 
+      margin: 0%;
+      font-size: 16px;
+      font-family: 'rockwell';
+      color: #1d1d1d;
+}
+    .EniSc_ItemsDetailCont span {
+      font-size: 16px;
+      font-family: 'rockwell';
+      letter-spacing: 3px;
+      color: #27810b;
+}
+    .EniSc_ItemsDetailCont button {
+      width: 40%;
+      padding: 1% 0%;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-family: 'rockwell';
+      letter-spacing: 3px;
+      color: black;
+      text-align: center;
+      background-color:  #a8e195;
+}
+  .EniSc_ItemsRatingCont { 
+  ` width: 100%;
+    padding: 2% 0%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 0%;
+}
+  .EniSc_ItemsRating { 
+      width: 96%;
+      padding-left: 4%;
+}
+    .EniSc_ItemsRating button { 
+      padding: 1%;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      color: #1d1d1d;
+      background-color: transparent;
+}
+      .EniSc_ItemsRating button:hover {
+        color:  #a8e195;
+}
+    .EniSc_ItemsRating p {
+      display: inline;
+      font-size: 16px;
+      font-weight: 600%;
+      color: #27810b;   
+}
+    .EniSc_Seperator {
+      margin: 0%;
+      font-size: 20px;
+      color: black;
+}
+  .EniSc_ItemsFav {
+    width: 100%;
+    margin: 0%;
+}
+    .EniSc_ItemsFav button { 
+      width: 40%;
+      padding: 2% 0%;
+      padding-top: 3%;
+      border: none;
+      border-radius: 1px;
+      outline: none;
+      font-size: 20px;
+      background-color:  #a8e195;
+}
+    .EniSc_ItemsFav button:hover {
+        color:   #a8e195;
+        background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Eni_FooterCont {
+  width: 100%;
+  margin: 0%;
+  margin-top: 1px;
+  padding: 2% 0%;
+  border-top: 1px solid #999999;
+  text-align: center;
+  background-color: #a8e195;
+}
+  .Eni_FooterCont p { 
+    margin:0%;
+    margin-bottom:1%;
+    font-family:'rockwell';
+    font-size:14px;
+    color:black;
+    cursor: default;
+}
+.EniSc_FooterMenu {
+  width: auto;
+  margin: 0%;
+}
+  .EniSc_FooterMenu a {
+    margin: 0% 3%;
+    padding:0%;
+    font-size:16px;
+    font-family:"rockwell";
+    color: black;
+    text-decoration: none;
+}

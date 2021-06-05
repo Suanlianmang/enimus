@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Enimus | Sign up{% endblock %}
+
+
+{% block catagory %}
+
+<div class="Eni_CategoriesBar"></div>
+
+{% endblock %}
+
+
+{% block loginform %}
+
+	{% csrf_token %}
+	<label for="phoneNumber"><span> Phone Number </span></label>
+		{{form.phone_number}}
+	<label for="password" ><span> Password </span></label>
+		{{form.password}}
+
+{% endblock %}
+
+
+{% block body %}
+
+{% load static %}
+<link rel='stylesheet' href="{% static 'signup.css' %}">
+  
+  <div class=" Eni_SignUpMainCont " >
+  
+	<span class="EniSc_SignUpLogoSec">
+		<h1>Sign up to Enimus</h1>
+		<h3>Experiance the best your locality have to provide</h3>
+	</span>
+	
+	<div class="EniSc_SignUpContainer">
+		<div class="alert">
+			<i class="closebtn" onclick="this.parentElement.style.display='none';">&times;</i> 
+			<strong id='alert'>{{alert}}</strong>
+		</div>
+		<form method="POST">
+			{% csrf_token %}
+			<label> <span> Phone Number </span> </label><br>
+				{{form1.phone_number}}
+			<label> <span> Full Name </span> </label><br>
+				{{form2.username}}
+			<label> <span> Password </span> </label><br>
+				{{form2.password1}}
+			<ul>
+				<li>Your password can’t be too similar to your other personal information.</li>
+				<li>Your password must contain at least <i id='length' class='invalid'>8 characters.</i></li>
+				<li>Your password can’t be a commonly used password.</li>
+				<li>Your password can’t be entirely numeric.</li>
+				<li>Your password should contain at least <i id='number' class='invalid'>one numeric digit</i>, <i id='upper' class='invalid'>one uppercase</i> and <i id='lower' class='invalid'>one lowercase letter</i></li>
+			</ul>
+			<label> <span> Confirm Password </span> </label> <br>
+				{{form2.password2}}
+			<div style="display: none;">
+				{{form1.user_type}}
+			</div>
+			<div class="agreed">
+				<input type="checkbox"  name="agreed" id='check'>
+				<span>By creating an account you agree to our <a href="#t&S">Terms & Services</a>. </span>
+			</div>
+	<button type='button'class="EniSc_SingUpButton cursorLink " onclick="CheckPassword()">SIGN UP</button>
+	<button type="submit" class="none" id="signup_butt"  name="signup" value="signup"></button>
+	</form>
+	<div class="EniSc_LogInBar">
+		<span>Already have an account. <a onclick="document.getElementsByClassName('LogInForm')[0].style.display='block';">Sign in here</a></span>
+	</div>
+	
+	</div>
+	
+	<div class="EniSc_SignUp2">
+		<hr>
+		<span>Want to promote your business? Sing up as a <a href="{% url 'ssignup' %}">Seller</a> </span>
+	</div>
+	
+  </div>
+   	<script>
+  	window.onload = function() {
+  		document.getElementById('id_user_type').value='customer';
+  		document.getElementById('id_password').type = 'password';
+  	}
+  </script>
+  <script src="{% static 'signup.js' %}"></script>
+
+{% endblock%}
